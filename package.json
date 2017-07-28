@@ -1,0 +1,28 @@
+{
+  "name": "react-jest-shoppingcart",
+  "version": "1.0.0",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "ejs":"~2.5.6",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "mongoose": "^4.11.4",
+    "react":"~15.6.1",
+    "react-dom":"~15.6.1",
+    "jquery":"~3.2.1",
+    "d3":"~4.10.0"
+  },
+  "devDependencies": {
+    "jest":"~20.0.4",
+    "webpack": "^3.4.1"
+  },
+  "description": "Node.js api tdd project",
+  "author": "benjamin",
+  "license": "ISC"
+}
