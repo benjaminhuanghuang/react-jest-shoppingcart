@@ -1,17 +1,12 @@
-"use strict";
-
-require('babel-core/register');
-
+const path = require('path');
 var express = require('express');
-var ReactDOMServer = require('react-dom/server');
-var React = require('react');
+
+
 var server = new express();
 
 server.set("view engine", "ejs");
-server.set("views", "./");
-server.use('/bower_components', express.static(__dirname + '/../bower_components'));
-server.use('/', express.static(__dirname + '/../.tmp'));
-server.use('/', express.static(__dirname + '/../app'));
+server.set("views",  path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'www')));
 
 var items = require('./items.js');
 

@@ -1,4 +1,4 @@
-let Dispatcher = require("flux").Dispatcher;
-let instance = new Dispatcher();
+import flux from "flux";
+let dispatcher = new flux.Dispatcher();
 
-module.exports = instance;
+export default dispatcher;

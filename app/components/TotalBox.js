@@ -1,6 +1,7 @@
-let d3 = require('d3');
-let React = require("react");
-let conversionHelper = require('./../helpers/conversionHelper.js');
+import React from 'react';
+import d3 from 'd3';
+
+import conversionHelper from './../helpers/conversionHelper.js';
 
 module.exports = React.createClass({
 	calculateTotalItemPrices(){
