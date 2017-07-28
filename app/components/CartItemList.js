@@ -3,7 +3,7 @@ import React from 'react';
 import CartItem  from './CartItem.js';
 
 
-export default CartItemList = ()=>{
+export default (props)=>{
     return (
       <div>
         {this.props.items.map((item, index)=>{

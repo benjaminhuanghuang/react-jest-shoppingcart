@@ -1,2 +1,2 @@
-## Master React Testing
+## Mastering React Testing
 

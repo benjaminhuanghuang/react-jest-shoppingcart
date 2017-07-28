@@ -1,7 +1,7 @@
 import React from 'react';
 
-import conversionHelper from './../helpers/conversionHelper.js';
-import itemsHelper from './../helpers/itemsHelper.js';
+import conversionHelper from '../helpers/conversionHelper.js';
+import itemsHelper from '../helpers/itemsHelper.js';
 
 export default class CartItem extends React.Component{
     getDefaultProps() {

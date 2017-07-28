@@ -10,7 +10,7 @@ const rates = {
 	"GB":0.65
 }
 
-export default conversionHelper = {
+export default {
 	toLocaleCurrencyString(amount,locale="USA"){
 		return this.getSymbolForCountry(locale) + this.toCurrencyString(this.convertFromUSD(locale,amount));
 	},

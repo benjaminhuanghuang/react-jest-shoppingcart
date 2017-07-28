@@ -1,12 +1,12 @@
 const path = require('path');
-var express = require('express');
+const express = require('express');
+const React = require('react');
 
-
-var server = new express();
+const server = new express();
 
 server.set("view engine", "ejs");
 server.set("views",  path.join(__dirname, 'views'));
-app.use(express.static(path.join(__dirname, 'www')));
+server.use(express.static(path.join(__dirname, 'www')));
 
 var items = require('./items.js');
 
@@ -26,21 +26,7 @@ var locale = {
 
 
 server.get('/', function (req, res) {
-        var app = React.createFactory(require('./../app/main.js'));
-
-        var generated = ReactDOMServer.renderToString(app({
-            items,
-            conversions,
-            locale
-        }));
-
-        res.render('app/index', {
-            app: generated,
-            defaults: JSON.stringify({
-                items,
-                conversions
-            })
-        });
+        res.render('index');
     })
     .get("/rates", function (req, res) {
         res.json(conversions);

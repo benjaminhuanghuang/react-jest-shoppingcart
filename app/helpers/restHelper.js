@@ -1,6 +1,6 @@
 import { jQuery as $ } from 'jquery';
 
-export default restHelper = {
+export default {
 	get(url) {
 		return new Promise(function (success, error) {
 			$.ajax({

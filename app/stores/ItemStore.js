@@ -1,5 +1,5 @@
-var restHelper = require("./../helpers/restHelper.js");
-let dispatcher = require('./../dispatcher.js');
+var restHelper = require("../helpers/restHelper.js");
+let dispatcher = require('../dispatcher.js');
 
 var items = [];
 var changeListeners = [];
