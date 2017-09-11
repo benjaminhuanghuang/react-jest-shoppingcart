@@ -14,7 +14,7 @@ export default class CartItem extends React.Component {
   }
 
   getLocalizedCurrencySymbol() {
-    return conversionHelper.getSymbolForCountry(this.props.locale.country);
+    return conversionHelper.getSymbolForCountry(this.props.local.country);
   }
 
   getLocalizedPriceString() {

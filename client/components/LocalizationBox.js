@@ -28,7 +28,7 @@ class LocalizationBox extends React.Component{
 	)}
 }
 
-function mapStateToProps({ local }) {
-  return { local };
+function mapStateToProps({ locale }) {
+  return { locale };
 }
 export default connect(mapStateToProps)(LocalizationBox);

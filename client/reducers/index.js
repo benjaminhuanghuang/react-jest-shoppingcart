@@ -1,13 +1,13 @@
 import { combineReducers } from "redux";
 //
 import ItemReducer from "./ItemReducer";
-import LocalReducer from "./LocalReducer";
+import LocaleReducer from "./LocaleReducer";
 import RateReducer from "./RateReducer";
 
 // maps state and reducer
 const reducers = combineReducers({
   items: ItemReducer,
-  local: LocalReducer,
+  locale: LocaleReducer,
   rate: RateReducer
 });
 

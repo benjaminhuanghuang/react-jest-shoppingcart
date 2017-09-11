@@ -1,6 +1,6 @@
 import axios from "axios";
 //
-import { FETCH_RATES, FETCH_ITEMS, DELETE_ITEM, FETCH_LOCAL } from "./types";
+import { FETCH_RATES, FETCH_ITEMS, DELETE_ITEM, FETCH_LOCALE } from "./types";
 
 export const fetchItems = () => async dispatch => {
   const res = await axios.get("/items");
@@ -11,7 +11,8 @@ export const fetchRates = () => async dispatch => {
   const res = await axios.get("/rates");
   dispatch({ type: FETCH_RATES, payload: res.data });
 };
-export const fetchLocal = () => async dispatch => {
-  const res = await axios.get("/items");
+
+export const fetchLocale = () => async dispatch => {
+  const res = await axios.get("/locale");
   dispatch({ type: FETCH_LOCAL, payload: res.data });
 };

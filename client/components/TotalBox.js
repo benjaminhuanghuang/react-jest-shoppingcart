@@ -3,7 +3,7 @@ import _ from "lodash";
 
 export default class TotalBox extends Component {
   calculateTotalItemPrices() {
-    return d3.sum(this.props.items, i => i.priceUSD);
+    return _.sumBy(this.props.items, i => i.priceUSD);
   }
 
   getTotalString() {
