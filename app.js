@@ -33,12 +33,16 @@ app.get("/", function(req, res) {
 app.get("/rates", function(req, res) {
   res.json(conversions);
 });
+
 app.get("/items", function(req, res) {
   res.json(items);
 });
+
 app.delete("/items/:id", function(req, res) {
   items = items.filter(item => req.params.id !== item.id);
+  res.json(items);
 });
+
 app.get("/locale", function(req, res) {
   res.json(locale);
 });

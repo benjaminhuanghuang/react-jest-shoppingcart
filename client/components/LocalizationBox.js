@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 //
-import { fetchLocale } from "../actions";
+import { fetchLocale, changeLocale } from "../actions";
 
 class LocalizationBox extends React.Component {
   componentWillMount() {
@@ -9,7 +9,7 @@ class LocalizationBox extends React.Component {
   }
 
 	handleCountryChange({target:{value}}){
-	
+		this.props.changeLocale(value);
 	}
 
   render() {
@@ -30,4 +30,4 @@ class LocalizationBox extends React.Component {
 function mapStateToProps({ locale }) {
   return { locale };
 }
-export default connect(mapStateToProps, { fetchLocale })(LocalizationBox);
+export default connect(mapStateToProps, { fetchLocale, changeLocale })(LocalizationBox);

@@ -1,8 +1,10 @@
 import React from "react";
+import { connect } from "react-redux";
 //
+import { deleteItem } from "../actions";
 import conversionHelper from '../helper/conversionHelper';
 
-export default class CartItem extends React.Component {
+class CartItem extends React.Component {
   
   getLocalizedCurrencySymbol() {
     return conversionHelper.getSymbolForCountry(this.props.locale.country);
@@ -19,7 +21,7 @@ export default class CartItem extends React.Component {
 
   removeItem(e) {
     e.preventDefault();
-    itemsHelper.removeItem(this.props.item);
+    this.props.deleteItem(this.props.item.id);
   }
 
   render() {
@@ -43,3 +45,5 @@ export default class CartItem extends React.Component {
     );
   }
 }
+
+export default connect(null, { deleteItem })(CartItem);

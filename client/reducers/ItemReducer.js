@@ -6,6 +6,9 @@ export default function(state = [], action) {
     case FETCH_ITEMS:
       return action.payload;
 
+    case DELETE_ITEM:
+      return action.payload;
+
     default:
       return state;
   }

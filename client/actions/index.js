@@ -7,6 +7,11 @@ export const fetchItems = () => async dispatch => {
   dispatch({ type: FETCH_ITEMS, payload: res.data });
 };
 
+export const deleteItem = id => async dispatch => {
+  const res = await axios.delete(`/items/$id`);
+  dispatch({ type: FETCH_ITEMS, payload: res.data });
+};
+
 export const fetchRates = () => async dispatch => {
   const res = await axios.get("/rates");
   dispatch({ type: FETCH_RATES, payload: res.data });
@@ -14,6 +19,12 @@ export const fetchRates = () => async dispatch => {
 
 export const fetchLocale = () => async dispatch => {
   const res = await axios.get("/locale");
-  console.log("res", res.data);
   dispatch({ type: FETCH_LOCALE, payload: res.data });
+};
+
+export const changeLocale = newLocale => {
+  return {
+    type: FETCH_LOCALE,
+    payload: {country: newLocale}
+  };
 };
