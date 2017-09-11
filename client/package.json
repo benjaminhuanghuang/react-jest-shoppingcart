@@ -12,7 +12,7 @@
     "redux": "^3.7.2",
     "react-redux": "^5.0.6",
     "redux-thunk": "^2.2.0",
-    "d3":"^4.10.2"
+    "lodash":"^4.17.4"
   },
   "devDependencies": {
     "jest": "~20.0.4",

@@ -1,7 +1,7 @@
-import React from "react";
-import d3 from "d3";
+import React, {Component} from "react";
+import _ from "lodash";
 
-export default class CartItem extends React.Component {
+export default class TotalBox extends Component {
   calculateTotalItemPrices() {
     return d3.sum(this.props.items, i => i.priceUSD);
   }
@@ -23,3 +23,9 @@ export default class CartItem extends React.Component {
     );
   }
 }
+
+
+function mapStateToProps({ items }) {
+  return { items };
+}
+export default connect(mapStateToProps)(TotalBox);
