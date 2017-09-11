@@ -40,6 +40,7 @@ app.get("/items", function(req, res) {
 
 app.delete("/items/:id", function(req, res) {
   items = items.filter(item => req.params.id !== item.id);
+  console.log(items);
   res.json(items);
 });
 

@@ -8,7 +8,8 @@ export const fetchItems = () => async dispatch => {
 };
 
 export const deleteItem = id => async dispatch => {
-  const res = await axios.delete(`/items/$id`);
+  const res = await axios.delete(`/items/${id}`);
+  console.log(res.body);
   dispatch({ type: FETCH_ITEMS, payload: res.data });
 };
 

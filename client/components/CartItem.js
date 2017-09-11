@@ -5,7 +5,11 @@ import { deleteItem } from "../actions";
 import conversionHelper from '../helper/conversionHelper';
 
 class CartItem extends React.Component {
-  
+  constructor(props)
+  {
+    super(props);
+    this.removeItem = this.removeItem.bind(this);
+  }
   getLocalizedCurrencySymbol() {
     return conversionHelper.getSymbolForCountry(this.props.locale.country);
   }
