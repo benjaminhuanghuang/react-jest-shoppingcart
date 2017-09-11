@@ -1,10 +1,12 @@
 const path = require("path");
 const express = require("express");
+const bodyParser = require("body-parser");
 
-const app = new express();
+const app = express();
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "client/dist")));
 
 var items = require("./items.js");
@@ -19,10 +21,10 @@ var locale = {
 };
 
 // use middleware simulate latency
-// server.use(function(req,res,next)
-// {
-//   setTimeout(next,3000)
-// });
+app.use(function(req,res,next)
+{
+  setTimeout(next,3000)
+});
 
 app.get("/", function(req, res) {
   res.render("index");

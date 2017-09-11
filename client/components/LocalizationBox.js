@@ -1,7 +1,6 @@
 import React from 'react';
-let dispatcher = require('./../dispatcher.js');
 
-export default class LocalizationBox extends React.Component{
+class LocalizationBox extends React.Component{
 	handleCountryChange({ target: { value } }) {
 		this.setState({ country: value });
 		dispatcher.dispatch({
@@ -12,7 +11,7 @@ export default class LocalizationBox extends React.Component{
 
 	getInitialState() {
 		return {
-			country: this.props.country || "USA",
+			country: this.props.local || "USA",
 		}
 	}
 
@@ -28,3 +27,8 @@ export default class LocalizationBox extends React.Component{
 			</form>
 	)}
 }
+
+function mapStateToProps({ local }) {
+  return { local };
+}
+export default connect(mapStateToProps)(LocalizationBox);

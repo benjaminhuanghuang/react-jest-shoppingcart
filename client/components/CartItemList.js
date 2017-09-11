@@ -2,7 +2,6 @@ import React from 'react';
 
 import CartItem  from './CartItem.js';
 
-
 export default (props)=>{
     return (
       <div>
