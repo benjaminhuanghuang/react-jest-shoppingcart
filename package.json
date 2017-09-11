@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon",
-    "build:client": "webpack",
-    "test:client": "mocha"
+    "build:client": "npm run build --prefix client",
+    "test:client": "npm run test --prefix client"
   },
   "dependencies": {
     "ejs":"~2.5.6",

@@ -3,6 +3,8 @@ users.json
 # Mac system file
 .DS_Store
 www/dist
+*-lock.json
+
 # Logs
 logs
 *.log

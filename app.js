@@ -5,7 +5,7 @@ const app = new express();
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
-app.use(express.static(path.join(__dirname, "www")));
+app.use(express.static(path.join(__dirname, "client/dist")));
 
 var items = require("./items.js");
 

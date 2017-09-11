@@ -2,7 +2,7 @@ users.json
 
 # Mac system file
 .DS_Store
-
+dist
 # Logs
 logs
 *.log
