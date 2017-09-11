@@ -1,20 +1,11 @@
 import React from "react";
+//
+import conversionHelper from '../helper/conversionHelper';
 
 export default class CartItem extends React.Component {
-  getDefaultProps() {
-    return {
-      item: {
-        name: "default item",
-        price: 1
-      },
-      locale: {
-        country: undefined
-      }
-    };
-  }
-
+  
   getLocalizedCurrencySymbol() {
-    return conversionHelper.getSymbolForCountry(this.props.local.country);
+    return conversionHelper.getSymbolForCountry(this.props.locale.country);
   }
 
   getLocalizedPriceString() {

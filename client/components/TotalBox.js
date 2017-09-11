@@ -1,7 +1,10 @@
 import React, {Component} from "react";
+import { connect } from "react-redux";
 import _ from "lodash";
+//
+import conversionHelper from '../helper/conversionHelper';
 
-export default class TotalBox extends Component {
+class TotalBox extends Component {
   calculateTotalItemPrices() {
     return _.sumBy(this.props.items, i => i.priceUSD);
   }
@@ -25,7 +28,7 @@ export default class TotalBox extends Component {
 }
 
 
-function mapStateToProps({ items }) {
-  return { items };
+function mapStateToProps({ items, locale }) {
+  return { items, locale };
 }
 export default connect(mapStateToProps)(TotalBox);

@@ -14,5 +14,6 @@ export const fetchRates = () => async dispatch => {
 
 export const fetchLocale = () => async dispatch => {
   const res = await axios.get("/locale");
-  dispatch({ type: FETCH_LOCAL, payload: res.data });
+  console.log("res", res.data);
+  dispatch({ type: FETCH_LOCALE, payload: res.data });
 };
