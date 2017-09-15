@@ -28,3 +28,18 @@
     let TestUtils = require('react-addons-test-utils');
   - new 
     let TestUtils = require('react-dom/test-utils');
+
+
+## Mock the provider
+```
+  import configureStore from "redux-mock-store";
+
+  const mockStore = configureStore();
+  const store = mockStore({});
+
+  var cartItem = TestUtils.renderIntoDocument(
+    <Provider store={store}>
+      <CartItem item={item} locale={{country: "USA"}}/>
+    </Provider>
+  );
+```
