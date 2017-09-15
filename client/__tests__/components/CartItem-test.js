@@ -1,3 +1,4 @@
+// Disable mocking of target module
 jest.dontMock("../../components/CartItem.js");
 
 import { Provider } from "react-redux";
