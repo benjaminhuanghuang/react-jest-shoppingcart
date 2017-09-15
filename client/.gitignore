@@ -1,5 +1,5 @@
 users.json
-
+coverage/
 # Mac system file
 .DS_Store
 dist

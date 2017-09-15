@@ -1,7 +1,7 @@
 "use strict";
 
-jest.dontMock('../../../app/helpers/restHelper.js');
-describe('the GET Helper', function() {
+jest.dontMock('../../../helpers/restHelper.js');
+xdescribe('the GET Helper', function() {
 	it('makes a GET request with the correct paramaters', function() {
 
 		let $ = require('jquery');
