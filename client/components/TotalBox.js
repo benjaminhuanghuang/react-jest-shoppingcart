@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import { connect } from "react-redux";
 import _ from "lodash";
 //
-import conversionHelper from '../helper/conversionHelper';
+import conversionHelper from '../helpers/conversionHelper';
 
 class TotalBox extends Component {
   calculateTotalItemPrices() {

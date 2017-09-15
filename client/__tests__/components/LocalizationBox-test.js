@@ -1,9 +1,8 @@
 "use strict";
-jest.dontMock('../../../components/LocalizationBox.js');
+jest.dontMock('../../components/LocalizationBox.js');
 
-let React = require('react');
-//let TestUtils = React.addons.TestUtils;
-let TestUtils = require('react-addons-test-utils');
+import React from 'react';
+import TestUtils from 'react-dom/test-utils';
 
 xdescribe("the localization box",()=>{
 	it("should display the country associated with the current value",()=>{
@@ -35,7 +34,7 @@ xdescribe("the localization box",()=>{
 
 		dispatcher.dispatch = jest.genMockFn();
 
-		let LocalizationBox = require('../../../app/components/LocalizationBox.js');
+		let LocalizationBox = require('../../components/LocalizationBox.js');
 
 		let localeInfo = {
 			country:"USA"

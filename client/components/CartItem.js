@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 //
 import { deleteItem } from "../actions";
-import conversionHelper from '../helper/conversionHelper';
+import conversionHelper from '../helpers/conversionHelper';
 
 class CartItem extends React.Component {
   constructor(props)

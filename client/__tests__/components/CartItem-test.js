@@ -1,12 +1,11 @@
 
-jest.dontMock('../../../components/CartItem.js');
+jest.dontMock('../../components/CartItem.js');
 
-var React = require('react');
-let TestUtils = require('react-addons-test-utils');
+import React from 'react';
+import TestUtils from 'react-dom/test-utils';
+import CartItem from '../../components/CartItem.js';
 
-describe.skip('Cart Item', function() {
-
-  
+describe('Cart Item', function() {
   let item = {
 		id:"003",
 		name:"Instant Noodles",
@@ -17,8 +16,6 @@ describe.skip('Cart Item', function() {
   describe("The Name Display",()=>{
 
     it("should display the name of the item",()=>{
-
-      var CartItem = require('../../components/CartItem.js');
 
       // Render a list item in the document
       var cartItem = TestUtils.renderIntoDocument(
@@ -36,12 +33,10 @@ describe.skip('Cart Item', function() {
 
     it ("should display the regular USD price and dollar sign if the user's country is USA",()=>{
 
-      let conversionMock = require('../../../helpers/conversionHelper.js');
+      let conversionMock = require('../../helpers/conversionHelper.js');
       conversionMock.convertFromUSD = (x,y)=>(y * 1);
       conversionMock.getSymbolForCountry = c => "$";
 			conversionMock.toCurrencyString = x => x.toFixed(2);
-
-      let CartItem = require('../../../components/CartItem.js');
 
       var cartItem = TestUtils.renderIntoDocument(
         <CartItem item={item}/>

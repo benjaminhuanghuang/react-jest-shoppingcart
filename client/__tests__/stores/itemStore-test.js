@@ -2,7 +2,7 @@ xdescribe("The Item Store", () => {
   describe("The Item Store", function() {
     it("Should make a request to resthelper to call /items", () => {
       let itemStore = require.requireActual("../../../app/stores/itemStore.js");
-      let restHelper = require("../../../helpers/restHelper.js");
+      let restHelper = require("../../helpers/restHelper.js");
 
       expect(restHelper.get).toBeCalledWith("items");
     });
